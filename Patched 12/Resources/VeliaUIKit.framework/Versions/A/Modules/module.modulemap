@@ -1,0 +1,6 @@
+framework module VeliaUIKit {
+  umbrella header "VeliaUIKit.h"
+
+  export *
+  module * { export * }
+}
