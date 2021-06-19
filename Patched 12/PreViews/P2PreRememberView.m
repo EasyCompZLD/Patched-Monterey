@@ -1,14 +1,14 @@
 //
-//  P2PreMainController.m
-//  Patched 12
+//  P2PreRememberView.m
+//  Patched Monterey
 //
-//  Created by Ben Sova on 5/29/21.
+//  Created by TestOS on 6/18/21.
 //
 
-#import "P2PreMainController.h"
+#import "P2PreRememberView.h"
 #import "P2App.h"
 
-@interface P2PreMainController ()
+@interface P2PreRememberView ()
 
 @property (strong) IBOutlet NSTextField *titleText;
 @property (strong) IBOutlet NSTextField *subTitleText;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation P2PreMainController
+@implementation P2PreRememberView
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -55,7 +55,7 @@
     [self.view addSubview:self.subTitleText];
     
     self.firstText = [[NSTextField alloc] initWithFrame:CGRectMake(0, 233, 541, 19)];
-    self.firstText.stringValue = NSLocalizedString(@"PRE-WELCOME-TITLE", @"PRE-WELCOME-TITLE");
+    self.firstText.stringValue = NSLocalizedString(@"PRE-REMEMBER-TITLE", @"PRE-REMEMBER-TITLE");
     [self.firstText setBezeled:FALSE];
     [self.firstText setBordered:FALSE];
     [self.firstText setSelectable:FALSE];
@@ -65,7 +65,7 @@
     [self.firstText setAlignment:NSTextAlignmentCenter];
     
     self.secondText = [[NSTextField alloc] initWithFrame:CGRectMake(30, 62, 541, 155)];
-    self.secondText.stringValue = NSLocalizedString(@"PRE-WELCOME-DESCRIPTION", "PRE-WELCOME-DESCRIPTION");
+    self.secondText.stringValue = NSLocalizedString(@"PRE-REMEMBER-DESCRIPTION", "PRE-REMEMBER-DESCRIPTION");
     self.secondText.drawsBackground = false;
     [self.secondText setBezeled:FALSE];
     [self.secondText setBordered:FALSE];
@@ -76,9 +76,9 @@
     [self.secondText setAlignment:NSTextAlignmentCenter];
     
     self.startButton = [[VIButton alloc] initWithFrame:CGRectMake(239, 46, 122, 26)];
-    self.startButton.buttonText = NSLocalizedString(@"GET-STARTED", "GET-STARTED");
+    self.startButton.buttonText = NSLocalizedString(@"CONTINUE", "CONTINUE");
     [self.startButton setWidth:122];
-    [self.startButton setAction:@selector(p2PreMainContinue:)];
+    [self.startButton setAction:@selector(p2PreRememberContinue:)];
     [self.view addSubview:self.startButton];
     
     self.containerView = [[NSTextField alloc] initWithFrame:CGRectMake(26, 20, 550, 243)];

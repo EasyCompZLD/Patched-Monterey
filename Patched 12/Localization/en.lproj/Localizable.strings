@@ -8,11 +8,20 @@
 
 // MARK: Initial Texts (v0.0.1)
 
-// General
-
 "GET-STARTED" = "Get Started";
+"CONTINUE" = "Continue";
 
-// Welcome Screen
+// MARK: Welcome Screen
 
 "PRE-WELCOME-TITLE" = "Welcome to Patched Monterey";
 "PRE-WELCOME-DESCRIPTION" = "Uhh.... I don't know what to put here, so here's a placeholder that'll be super long! I'll think about this text later, don't worry. It'll be such great text, that some people's minds will explode (possibly literally).";
+
+// MARK: Please Remember Screen
+
+"PRE-REMEMBER-TITLE" = "Please Remember";
+"PRE-REMEMBER-DESCRIPTION" = "Patched Monterey is currently in beta and it will never be perfect. While it should not brick your Mac, it can cause you to lose your data if you don't have a backup. No matter what, make a Time Machine Backup before upgrading. I (and contributors) will not be liable if something goes wrong. I will go to the best of my abilities to help if there is a problem, but I don't know everything and there are some cases where I cannot help. A lot of times, it isn't even Patched Sur's fault, so there's nothing I can do.";
+
+// MARK: Thanks To Screen
+
+"PRE-THANKS-TITLE" = "Thanks To";
+"PRE-THANKS-DESCRIPTION" = "For a placeholder... I'll say me.";

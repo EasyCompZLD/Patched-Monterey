@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		529D59E5267C1B30004E8E68 /* VIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 529D59E4267C1B30004E8E68 /* VIButton.m */; };
 		529D59E9267C1BF5004E8E68 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 529D59EB267C1BF5004E8E68 /* Localizable.strings */; };
+		52CF6066267E731A0089D6D1 /* P2PreRememberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF6063267E731A0089D6D1 /* P2PreRememberView.m */; };
+		52CF6067267E731A0089D6D1 /* P2PreRememberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CF6064267E731A0089D6D1 /* P2PreRememberView.xib */; };
+		52CF606A267E76250089D6D1 /* P2PreThanksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF6069267E76250089D6D1 /* P2PreThanksView.m */; };
+		52CF606C267E76CB0089D6D1 /* P2PreThanksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CF606B267E76CB0089D6D1 /* P2PreThanksView.xib */; };
 		765C7DF2266C57DE00521A65 /* P2PostMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765C7DF1266C57DE00521A65 /* P2PostMainController.m */; };
 		765C7DF5266C580400521A65 /* P2PostMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765C7DF4266C580400521A65 /* P2PostMainController.xib */; };
 		76A007DA26630CDF009ED115 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A007D926630CDF009ED115 /* AppDelegate.m */; };
@@ -37,6 +41,12 @@
 		529D59E3267C1AD7004E8E68 /* VIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIButton.h; sourceTree = "<group>"; };
 		529D59E4267C1B30004E8E68 /* VIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIButton.m; sourceTree = "<group>"; };
 		529D59EA267C1BF5004E8E68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52CF6063267E731A0089D6D1 /* P2PreRememberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = P2PreRememberView.m; path = "../../../../../../../Macintosh SSD/Users/bensova/Developer/Patched 12/Patched 12/PreViews/P2PreRememberView.m"; sourceTree = "<group>"; };
+		52CF6064267E731A0089D6D1 /* P2PreRememberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = P2PreRememberView.xib; path = "../../../../../../../Macintosh SSD/Users/bensova/Developer/Patched 12/Patched 12/PreViews/P2PreRememberView.xib"; sourceTree = "<group>"; };
+		52CF6065267E731A0089D6D1 /* P2PreRememberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = P2PreRememberView.h; path = "../../../../../../../Macintosh SSD/Users/bensova/Developer/Patched 12/Patched 12/PreViews/P2PreRememberView.h"; sourceTree = "<group>"; };
+		52CF6068267E76130089D6D1 /* P2PreThanksView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2PreThanksView.h; sourceTree = "<group>"; };
+		52CF6069267E76250089D6D1 /* P2PreThanksView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2PreThanksView.m; sourceTree = "<group>"; };
+		52CF606B267E76CB0089D6D1 /* P2PreThanksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = P2PreThanksView.xib; path = "../../../../../../../Macintosh SSD/Users/bensova/Developer/Patched 12/Patched 12/PreViews/P2PreThanksView.xib"; sourceTree = "<group>"; };
 		765C7DF1266C57DE00521A65 /* P2PostMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2PostMainController.m; sourceTree = "<group>"; };
 		765C7DF3266C57F100521A65 /* P2PostMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2PostMainController.h; sourceTree = "<group>"; };
 		765C7DF4266C580400521A65 /* P2PostMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = P2PostMainController.xib; sourceTree = "<group>"; };
@@ -89,6 +99,12 @@
 				76A007EC26631977009ED115 /* P2PreMainController.h */,
 				76A007ED26632007009ED115 /* P2PreMainController.m */,
 				76A007EF26632053009ED115 /* P2PreMainController.xib */,
+				52CF6065267E731A0089D6D1 /* P2PreRememberView.h */,
+				52CF6063267E731A0089D6D1 /* P2PreRememberView.m */,
+				52CF6064267E731A0089D6D1 /* P2PreRememberView.xib */,
+				52CF6068267E76130089D6D1 /* P2PreThanksView.h */,
+				52CF6069267E76250089D6D1 /* P2PreThanksView.m */,
+				52CF606B267E76CB0089D6D1 /* P2PreThanksView.xib */,
 			);
 			path = PreViews;
 			sourceTree = "<group>";
@@ -225,8 +241,10 @@
 				529D59E9267C1BF5004E8E68 /* Localizable.strings in Resources */,
 				76A007DC26630CE2009ED115 /* Assets.xcassets in Resources */,
 				76A007F026632053009ED115 /* P2PreMainController.xib in Resources */,
+				52CF6067267E731A0089D6D1 /* P2PreRememberView.xib in Resources */,
 				765C7DF5266C580400521A65 /* P2PostMainController.xib in Resources */,
 				76A007DF26630CE2009ED115 /* MainMenu.xib in Resources */,
+				52CF606C267E76CB0089D6D1 /* P2PreThanksView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				529D59E5267C1B30004E8E68 /* VIButton.m in Sources */,
+				52CF606A267E76250089D6D1 /* P2PreThanksView.m in Sources */,
 				765C7DF2266C57DE00521A65 /* P2PostMainController.m in Sources */,
+				52CF6066267E731A0089D6D1 /* P2PreRememberView.m in Sources */,
 				76A007EB26630EE2009ED115 /* P2App.m in Sources */,
 				76A007E226630CE2009ED115 /* main.m in Sources */,
 				76A007EE26632007009ED115 /* P2PreMainController.m in Sources */,

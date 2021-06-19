@@ -1,14 +1,14 @@
 //
-//  P2PreMainController.m
-//  Patched 12
+//  P2PreThanksVIew.m
+//  Patched Monterey
 //
-//  Created by Ben Sova on 5/29/21.
+//  Created by Ben Sova on 6/19/21.
 //
 
-#import "P2PreMainController.h"
+#import "P2PreThanksView.h"
 #import "P2App.h"
 
-@interface P2PreMainController ()
+@interface P2PreThanksView ()
 
 @property (strong) IBOutlet NSTextField *titleText;
 @property (strong) IBOutlet NSTextField *subTitleText;
@@ -20,11 +20,9 @@
 @property (strong) IBOutlet NSTextField *containerView;
 @property (strong) IBOutlet NSStackView *centerStack;
 
-@property (strong) IBOutlet NSTextField *guideline;
-
 @end
 
-@implementation P2PreMainController
+@implementation P2PreThanksView
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -55,7 +53,7 @@
     [self.view addSubview:self.subTitleText];
     
     self.firstText = [[NSTextField alloc] initWithFrame:CGRectMake(0, 233, 541, 19)];
-    self.firstText.stringValue = NSLocalizedString(@"PRE-WELCOME-TITLE", @"PRE-WELCOME-TITLE");
+    self.firstText.stringValue = NSLocalizedString(@"PRE-THANKS-TITLE", @"PRE-THANKS-TITLE");
     [self.firstText setBezeled:FALSE];
     [self.firstText setBordered:FALSE];
     [self.firstText setSelectable:FALSE];
@@ -65,7 +63,7 @@
     [self.firstText setAlignment:NSTextAlignmentCenter];
     
     self.secondText = [[NSTextField alloc] initWithFrame:CGRectMake(30, 62, 541, 155)];
-    self.secondText.stringValue = NSLocalizedString(@"PRE-WELCOME-DESCRIPTION", "PRE-WELCOME-DESCRIPTION");
+    self.secondText.stringValue = NSLocalizedString(@"PRE-THANKS-DESCRIPTION", "PRE-THANKS-DESCRIPTION");
     self.secondText.drawsBackground = false;
     [self.secondText setBezeled:FALSE];
     [self.secondText setBordered:FALSE];
@@ -76,9 +74,8 @@
     [self.secondText setAlignment:NSTextAlignmentCenter];
     
     self.startButton = [[VIButton alloc] initWithFrame:CGRectMake(239, 46, 122, 26)];
-    self.startButton.buttonText = NSLocalizedString(@"GET-STARTED", "GET-STARTED");
+    self.startButton.buttonText = NSLocalizedString(@"CONTINUE", "CONTINUE");
     [self.startButton setWidth:122];
-    [self.startButton setAction:@selector(p2PreMainContinue:)];
     [self.view addSubview:self.startButton];
     
     self.containerView = [[NSTextField alloc] initWithFrame:CGRectMake(26, 20, 550, 243)];
