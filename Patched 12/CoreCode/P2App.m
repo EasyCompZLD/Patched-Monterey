@@ -18,8 +18,8 @@
 }
 
 +(NSString*)isPatched {
-    return [[self runTask:@"/usr/sbin/nvram" arguments:@[ @"4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:PSVersion" ]][0]
-            substringFromIndex:47];
+    return [[[self runTask:@"/usr/sbin/nvram" arguments:@[ @"4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:PSVersion" ]][0]
+             substringFromIndex:47] substringToIndex:7];
 }
 
 +(NSArray*)runTask:(NSString*)binary arguments:(NSArray<NSString *> * _Nullable)arguments {
@@ -53,6 +53,57 @@
     }
     
     return [NSArray arrayWithObjects:@"", statusCode, nil];
+}
+
+@end
+
+@implementation NSView (P2Adds)
+
+-(void)setCenter:(CGPoint)center {
+    [self setFrame:CGRectMake(center.x - [self bounds].size.width / 2, center.y - [self bounds].size.height / 2, [self bounds].size.width, [self bounds].size.height)];
+}
+
+-(CGPoint)getCenter {
+    return CGPointMake((self.frame.origin.x + (self.frame.size.width / 2)), (self.frame.origin.y + (self.frame.size.height / 2)));
+}
+
+-(void)centerInSuperView {
+    [self.superview addConstraint:[NSLayoutConstraint
+        constraintWithItem:self.superview
+        attribute:NSLayoutAttributeCenterY
+        relatedBy:NSLayoutRelationEqual
+        toItem:self
+        attribute:NSLayoutAttributeCenterY
+        multiplier:1.0
+        constant:0.0]];
+}
+
+-(void)centerXInSuper {
+    [self.superview addConstraint:[NSLayoutConstraint
+        constraintWithItem:self.superview
+        attribute:NSLayoutAttributeCenterX
+        relatedBy:NSLayoutRelationEqual
+        toItem:self
+        attribute:NSLayoutAttributeCenterX
+        multiplier:1.0
+        constant:0.0]];
+}
+
+-(void)limitToView {
+    [self.superview addConstraint:[NSLayoutConstraint
+        constraintWithItem:self.superview
+        attribute:NSLayoutAttributeLeading
+        relatedBy:NSLayoutRelationEqual
+        toItem:self
+        attribute:NSLayoutAttributeLeading
+        multiplier:1.0 constant:0]];
+    [self.superview addConstraint:[NSLayoutConstraint
+        constraintWithItem:self.superview
+        attribute:NSLayoutAttributeTrailing
+        relatedBy:NSLayoutRelationEqual
+        toItem:self
+        attribute:NSLayoutAttributeTrailing
+        multiplier:1.0 constant:0]];
 }
 
 @end

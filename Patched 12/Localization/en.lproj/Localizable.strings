@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Patched Monterey
+
+  Created by Ben Sova on 6/17/21.
+  English (en)
+*/
+
+// MARK: Initial Texts (v0.0.1)
+
+// General
+
+"GET-STARTED" = "Get Started";
+
+// Welcome Screen
+
+"PRE-WELCOME-TITLE" = "Welcome to Patched Monterey";
+"PRE-WELCOME-DESCRIPTION" = "Uhh.... I don't know what to put here, so here's a placeholder that'll be super long! I'll think about this text later, don't worry. It'll be such great text, that some people's minds will explode (possibly literally).";

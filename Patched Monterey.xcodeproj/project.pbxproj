@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		529D59E5267C1B30004E8E68 /* VIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 529D59E4267C1B30004E8E68 /* VIButton.m */; };
+		529D59E9267C1BF5004E8E68 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 529D59EB267C1BF5004E8E68 /* Localizable.strings */; };
 		765C7DF2266C57DE00521A65 /* P2PostMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765C7DF1266C57DE00521A65 /* P2PostMainController.m */; };
 		765C7DF5266C580400521A65 /* P2PostMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765C7DF4266C580400521A65 /* P2PostMainController.xib */; };
-		765C7DFE266C644B00521A65 /* VeliaUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765C7DFC266C642100521A65 /* VeliaUIKit.framework */; };
-		765C7DFF266C644C00521A65 /* VeliaUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765C7DFC266C642100521A65 /* VeliaUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76A007DA26630CDF009ED115 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A007D926630CDF009ED115 /* AppDelegate.m */; };
 		76A007DC26630CE2009ED115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A007DB26630CE2009ED115 /* Assets.xcassets */; };
 		76A007DF26630CE2009ED115 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A007DD26630CE2009ED115 /* MainMenu.xib */; };
@@ -27,7 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				765C7DFF266C644C00521A65 /* VeliaUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,10 +34,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		529D59E3267C1AD7004E8E68 /* VIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIButton.h; sourceTree = "<group>"; };
+		529D59E4267C1B30004E8E68 /* VIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIButton.m; sourceTree = "<group>"; };
+		529D59EA267C1BF5004E8E68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		765C7DF1266C57DE00521A65 /* P2PostMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2PostMainController.m; sourceTree = "<group>"; };
 		765C7DF3266C57F100521A65 /* P2PostMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2PostMainController.h; sourceTree = "<group>"; };
 		765C7DF4266C580400521A65 /* P2PostMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = P2PostMainController.xib; sourceTree = "<group>"; };
-		765C7DFC266C642100521A65 /* VeliaUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VeliaUIKit.framework; sourceTree = "<group>"; };
 		76A007D526630CDF009ED115 /* Patched Monterey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patched Monterey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A007D826630CDF009ED115 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76A007D926630CDF009ED115 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,13 +60,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				765C7DFE266C644B00521A65 /* VeliaUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		529D59E2267C1A9B004E8E68 /* ModuleViews */ = {
+			isa = PBXGroup;
+			children = (
+				529D59E3267C1AD7004E8E68 /* VIButton.h */,
+				529D59E4267C1B30004E8E68 /* VIButton.m */,
+			);
+			path = ModuleViews;
+			sourceTree = "<group>";
+		};
+		529D59E6267C1BD9004E8E68 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				529D59EB267C1BF5004E8E68 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		765C7DEE266C575100521A65 /* PreViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +119,6 @@
 		765C7DFB266C63D200521A65 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				765C7DFC266C642100521A65 /* VeliaUIKit.framework */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -134,8 +150,10 @@
 		76A007D726630CDF009ED115 /* Patched 12 */ = {
 			isa = PBXGroup;
 			children = (
+				529D59E6267C1BD9004E8E68 /* Localization */,
 				765C7DEF266C576200521A65 /* CoreCode */,
 				765C7DFB266C63D200521A65 /* Resources */,
+				529D59E2267C1A9B004E8E68 /* ModuleViews */,
 				765C7DEE266C575100521A65 /* PreViews */,
 				765C7DF0266C57AA00521A65 /* PostViews */,
 				76A007DB26630CE2009ED115 /* Assets.xcassets */,
@@ -176,11 +194,13 @@
 				TargetAttributes = {
 					76A007D426630CDF009ED115 = {
 						CreatedOnToolsVersion = 12.5;
+						DevelopmentTeam = 52RY4VB4F6;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 76A007D026630CDF009ED115 /* Build configuration list for PBXProject "Patched Monterey" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -202,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529D59E9267C1BF5004E8E68 /* Localizable.strings in Resources */,
 				76A007DC26630CE2009ED115 /* Assets.xcassets in Resources */,
 				76A007F026632053009ED115 /* P2PreMainController.xib in Resources */,
 				765C7DF5266C580400521A65 /* P2PostMainController.xib in Resources */,
@@ -216,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529D59E5267C1B30004E8E68 /* VIButton.m in Sources */,
 				765C7DF2266C57DE00521A65 /* P2PostMainController.m in Sources */,
 				76A007EB26630EE2009ED115 /* P2App.m in Sources */,
 				76A007E226630CE2009ED115 /* main.m in Sources */,
@@ -227,6 +249,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		529D59EB267C1BF5004E8E68 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				529D59EA267C1BF5004E8E68 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		76A007DD26630CE2009ED115 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,10 +395,7 @@
 					"$(PROJECT_DIR)/Patched\\ 12/Resources",
 				);
 				INFOPLIST_FILE = "Patched 12/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.bensova.Patched-12";
@@ -392,10 +419,7 @@
 					"$(PROJECT_DIR)/Patched\\ 12/Resources",
 				);
 				INFOPLIST_FILE = "Patched 12/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.bensova.Patched-12";

@@ -7,53 +7,20 @@
 
 #import "P2PreMainController.h"
 #import "P2App.h"
-#import <VeliaUIKit/VeliaUIKit.h>
 
 @interface P2PreMainController ()
 
-//@property (strong) IBOutlet NSTextField *titleText;
-//@property (strong) IBOutlet NSTextField *subTitleText;
-//@property (strong) IBOutlet NSStackView *viewStack;
-@property (strong) IBOutlet VIHeader *headerView;
+@property (strong) IBOutlet NSTextField *titleText;
+@property (strong) IBOutlet NSTextField *subTitleText;
 
-@end
+@property (strong) IBOutlet NSTextField *firstText;
+@property (strong) IBOutlet NSTextField *secondText;
+@property (strong) IBOutlet VIButton *startButton;
 
-@interface NSView (P2Adds)
+@property (strong) IBOutlet NSTextField *containerView;
+@property (strong) IBOutlet NSStackView *centerStack;
 
--(void)setCenter:(CGPoint)center;
--(CGPoint)getCenter;
--(void)centerInSuperView;
-
-@end
-
-@implementation NSView (P2Adds)
-
--(void)setCenter:(CGPoint)center {
-    [self setFrame:CGRectMake(center.x - [self bounds].size.width / 2, center.y - [self bounds].size.height / 2, [self bounds].size.width, [self bounds].size.height)];
-}
-
--(CGPoint)getCenter {
-    return CGPointMake((self.frame.origin.x + (self.frame.size.width / 2)), (self.frame.origin.y + (self.frame.size.height / 2)));
-}
-
--(void)centerInSuperView {
-    [self.superview addConstraint:[NSLayoutConstraint
-        constraintWithItem:self.superview
-        attribute:NSLayoutAttributeCenterX
-        relatedBy:NSLayoutRelationEqual
-        toItem:self
-        attribute:NSLayoutAttributeCenterX
-        multiplier:1.0
-        constant:0.0]];
-    [self.superview addConstraint:[NSLayoutConstraint
-        constraintWithItem:self.superview
-        attribute:NSLayoutAttributeCenterY
-        relatedBy:NSLayoutRelationEqual
-        toItem:self
-        attribute:NSLayoutAttributeCenterY
-        multiplier:1.0
-        constant:0.0]];
-}
+@property (strong) IBOutlet NSTextField *guideline;
 
 @end
 
@@ -87,19 +54,49 @@
     [self.subTitleText setAlphaValue:0.55];
     [self.view addSubview:self.subTitleText];
     
-//    self.headerView = [[VIHeader alloc] initWithTitle:@"Patched Monterey" subTitle:p2Details frame:self.view.frame];
-    self.headerView = [[VIHeader alloc] initWithFrame:self.view.frame];
-//    self.headerView.frame = self.view.frame;
-//    [self.headerView.titleText setNeedsDisplay:TRUE];
-    [self.view addSubview:self.headerView];
+    self.firstText = [[NSTextField alloc] initWithFrame:CGRectMake(0, 233, 541, 19)];
+    self.firstText.stringValue = NSLocalizedString(@"PRE-WELCOME-TITLE", @"PRE-WELCOME-TITLE");
+    [self.firstText setBezeled:FALSE];
+    [self.firstText setBordered:FALSE];
+    [self.firstText setSelectable:FALSE];
+    [self.firstText setFont:[NSFont boldSystemFontOfSize:15]];
+    self.firstText.drawsBackground = false;
+    [self.firstText setAutoresizingMask:NSViewMinXMargin | NSViewMaxXMargin | NSViewMinYMargin | NSViewMaxYMargin];
+    [self.firstText setAlignment:NSTextAlignmentCenter];
+    
+    self.secondText = [[NSTextField alloc] initWithFrame:CGRectMake(30, 62, 541, 155)];
+    self.secondText.stringValue = NSLocalizedString(@"PRE-WELCOME-DESCRIPTION", "PRE-WELCOME-DESCRIPTION");
+    self.secondText.drawsBackground = false;
+    [self.secondText setBezeled:FALSE];
+    [self.secondText setBordered:FALSE];
+    [self.secondText setSelectable:FALSE];
+    [self.secondText setAutoresizingMask:NSViewHeightSizable];
+    self.secondText.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.secondText sizeThatFits:CGSizeMake(541, 300)];
+    [self.secondText setAlignment:NSTextAlignmentCenter];
+    
+    self.startButton = [[VIButton alloc] initWithFrame:CGRectMake(239, 46, 122, 26)];
+    self.startButton.buttonText = NSLocalizedString(@"GET-STARTED", "GET-STARTED");
+    [self.startButton setWidth:122];
+    [self.view addSubview:self.startButton];
+    
+    self.containerView = [[NSTextField alloc] initWithFrame:CGRectMake(32, 20, 550, 243)];
+    self.containerView.drawsBackground = false;
+    [self.containerView setBezeled:FALSE];
+    [self.containerView setBordered:FALSE];
+    [self.containerView setSelectable:FALSE];
+    self.secondText.translatesAutoresizingMaskIntoConstraints = false;
+    
+    [self.view addSubview:self.containerView];
+    
+    self.centerStack = [NSStackView stackViewWithViews:@[ self.firstText, self.secondText, self.startButton ]];
+    [self.centerStack setAlignment:NSLayoutAttributeCenterX];
+    [self.centerStack setSpacing:15];
+    [self.centerStack setFrame:self.containerView.frame];
+    self.centerStack.translatesAutoresizingMaskIntoConstraints = false;
+    [self.containerView addSubview:self.centerStack];
+    [self.centerStack limitToView];
+    [self.centerStack centerInSuperView];
 }
 
 @end
-
-
-/* self.viewStack = [NSStackView stackViewWithViews:@[ self.titleText, self.subTitleText ]];
-[self.viewStack setBounds:self.view.bounds];
-[self.viewStack setAlignment:NSLayoutAttributeLeading];
-[self.view addSubview:self.viewStack];
-[self.titleText setAutoresizingMask:NSViewMinXMargin | NSViewMaxXMargin | NSViewMinYMargin | NSViewMaxYMargin];
- */
