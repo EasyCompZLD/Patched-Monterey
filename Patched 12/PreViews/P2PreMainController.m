@@ -80,7 +80,7 @@
     [self.startButton setWidth:122];
     [self.view addSubview:self.startButton];
     
-    self.containerView = [[NSTextField alloc] initWithFrame:CGRectMake(32, 20, 550, 243)];
+    self.containerView = [[NSTextField alloc] initWithFrame:CGRectMake(25, 20, 550, 243)];
     self.containerView.drawsBackground = false;
     [self.containerView setBezeled:FALSE];
     [self.containerView setBordered:FALSE];
